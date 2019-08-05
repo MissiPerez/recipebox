@@ -1,0 +1,25 @@
+{%  for recipe in recipes  %}
+<h1>{{  recipe.title }}</h1>
+<p>
+    <strong>Chef:</strong>
+    <a href="/author/{{ recipe.author_id}}">{{ recipe.author }}</a>
+</p>
+<p>
+    <strong>Description:</strong>
+    {{ recipe.description }}
+</p>
+<p>
+    <strong>Time:</strong>
+    {{ recipe.time }}
+</p>
+<p>
+    <strong>Instructions:</strong>
+</p>
+    <ol>
+        {% for inst in instructions %}
+        <li>
+            {{ inst }}
+        </li>
+        {% endfor %}
+    </ol>
+{% endfor %}

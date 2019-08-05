@@ -1,0 +1,23 @@
+{% for auth in authors %}
+
+<h1>Meet our wonderful Chef!</h1>
+<p>
+    <strong>Chef:</strong>
+    {{ auth.name }}
+</p>
+<p>
+    <strong>Bio:</strong>
+    {{ auth.bio}}
+</p>
+
+<h2>{{ auth.name }}'s Recipes:</h2>
+{% endfor %}
+    {% for rec in recipes %}
+    <li>
+        <a href="/recipes/{{ rec.id }}">{{ rec.title }}</a>
+        
+    </li>
+    {% endfor %}
+    <br>
+    <br><br>
+    <a href="/">Home</a>
