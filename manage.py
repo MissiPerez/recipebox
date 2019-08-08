@@ -16,7 +16,7 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
-# this is a comment
+# this is a comment on a comment
 
 if __name__ == '__main__':
     main()
